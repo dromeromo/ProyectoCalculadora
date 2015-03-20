@@ -9,26 +9,31 @@
     <h:body>
         <h:form><div align="center">
                 <p/>
-                <p:inputText  value="#{mBDisplay.resultado}" id="disp" disabled="true" size="20"> </p:inputText>
+                <p:inputText  value="#{mBDisplay.resultado}" id="disp"  size="20"> </p:inputText>
                 <p/>
-                <p:commandButton value="7" update="disp" actionListener="#{mBDisplay.setResultado('7')}"/>&nbsp;
-                <p:commandButton value="8" update="disp" actionListener="#{mBDisplay.setResultado('8')}"/>&nbsp;
-                <p:commandButton value="9" update="disp" actionListener="#{mBDisplay.setResultado('9')}"/>&nbsp;
-                <p:commandButton value="/" update="disp" actionListener="#{mBDisplay.setResultado('/')}"/>
+                <p:commandButton value="Retroceso" update="disp" actionListener="#{mBDisplay.retroceso()}"/>&nbsp;
+                <p:commandButton value="&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;" update="disp" actionListener="#{mBDisplay.borrar()}"/>
                 <p/>
-                <p:commandButton value="4" update="disp" actionListener="#{mBDisplay.setResultado('4')}"/>&nbsp;
-                <p:commandButton value="5" update="disp" actionListener="#{mBDisplay.setResultado('5')}"/>&nbsp;
-                <p:commandButton value="6" update="disp" actionListener="#{mBDisplay.setResultado('6')}"/>&nbsp;
-                <p:commandButton value="*" update="disp" actionListener="#{mBDisplay.setResultado('*')}"/>
+                <p:commandButton value="7" update="disp" actionListener="#{mBDisplay.capturar('7')}"/>&nbsp;
+                <p:commandButton value="8" update="disp" actionListener="#{mBDisplay.capturar('8')}"/>&nbsp;
+                <p:commandButton value="9" update="disp" actionListener="#{mBDisplay.capturar('9')}"/>&nbsp;
+                <p:commandButton value="/" update="disp" actionListener="#{mBDisplay.capturar('/')}"/>
                 <p/>
-                <p:commandButton value="1" update="disp" actionListener="#{mBDisplay.setResultado('1')}"/>&nbsp;
-                <p:commandButton value="2" update="disp" actionListener="#{mBDisplay.setResultado('2')}"/>&nbsp;
-                <p:commandButton value="3" update="disp" actionListener="#{mBDisplay.setResultado('3')}"/>&nbsp;
-                <p:commandButton value="-" update="disp" actionListener="#{mBDisplay.setResultado('-')}"/>
+                <p:commandButton value="4" update="disp" actionListener="#{mBDisplay.capturar('4')}"/>&nbsp;
+                <p:commandButton value="5" update="disp" actionListener="#{mBDisplay.capturar('5')}"/>&nbsp;
+                <p:commandButton value="6" update="disp" actionListener="#{mBDisplay.capturar('6')}"/>&nbsp;
+                <p:commandButton value="*" update="disp" actionListener="#{mBDisplay.capturar('*')}"/>
+                <p/>
+                <p:commandButton value="1" update="disp" actionListener="#{mBDisplay.capturar('1')}"/>&nbsp;
+                <p:commandButton value="2" update="disp" actionListener="#{mBDisplay.capturar('2')}"/>&nbsp;
+                <p:commandButton value="3" update="disp" actionListener="#{mBDisplay.capturar('3')}"/>&nbsp;
+                <p:commandButton value="-" update="disp" actionListener="#{mBDisplay.capturar('-')}"/>&nbsp;
+       
                 <p/>
                 <p:commandButton value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" update="disp" actionListener="#{mBDisplay.setResultado('0')}"/>&nbsp;
-                <p:commandButton value=".&nbsp;" update="disp" actionListener="#{mBDisplay.setResultado('.')}"/>&nbsp;
-                <p:commandButton value="+" update="disp" actionListener="#{mBDisplay.setResultado('+')}"/>
+                <p:commandButton value=".&nbsp;" update="disp" actionListener="#{mBDisplay.capturar('.')}"/>&nbsp;
+                <p:commandButton value="+" update="disp" actionListener="#{mBDisplay.capturar('+')}"/>&nbsp;
+                <p:commandButton value="=" update="disp" />
 
             </div>
         </h:form>

@@ -13,8 +13,8 @@ import javax.faces.bean.ManagedBean;
  */
 @ManagedBean
 public class MBDisplay {
-    private String resultado="";
-    private String aux="";
+
+    private String resultado = "";
 
     public MBDisplay() {
     }
@@ -22,21 +22,25 @@ public class MBDisplay {
     public String getResultado() {
         return resultado;
     }
-
-    public String getAux() {
-        return aux;
+    public void retroceso() {
+        String aux = getResultado();
+        char array[] = aux.toCharArray();
+        aux = "";
+        for (int x = 0; x < array.length - 1; x++) {
+            aux = aux + array[x];
+        }
+        setResultado(aux);
     }
 
-    public void setAux(String aux) {
-        this.aux = aux;
+    public void capturar(String resultado) {
+        this.resultado = getResultado().concat(resultado);
     }
-    
+        public void borrar(){
+            setResultado("");
+    }
 
     public void setResultado(String resultado) {
-        this.resultado =getResultado().concat(resultado);
-        setAux(this.resultado);
+        this.resultado = resultado;
     }
-    
-    
-    
+
 }
